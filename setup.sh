@@ -7,6 +7,11 @@ echo " *** Config personal profile"
 cp ./home/dronische/.bashrc /home/dronische/.bashrc
 chown dronische:dronische /home/dronische/.bashrc
 
+mkdir /home/dronische/.ssh
+touch /home/dronische/.ssh/authorized_keys
+chmod 700 ./.ssh -R
+chown dronische:dronische /home/dronische/.ssh -R
+
 echo " *** Configuring pc name"
 cp ./etc/* /etc/
 
