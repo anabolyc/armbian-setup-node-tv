@@ -3,6 +3,10 @@
 # configure static mac 
 #nmcli connection modify "Wired connection 1" 802-3-ethernet.cloned-mac-address f2:ba:01:0d:7a:44
 
+echo " *** Config personal profile"
+cp ./home/dronische/.bashrc /home/dronische/.bashrc
+chown dronische:dronische /home/dronische/.bashrc
+
 echo " *** Configuring pc name"
 cp ./etc/* /etc/
 
