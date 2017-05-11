@@ -3,13 +3,17 @@
 # configure static mac 
 #nmcli connection modify "Wired connection 1" 802-3-ethernet.cloned-mac-address f2:ba:01:0d:7a:44
 
+echo " *** GIT settings"
+git config --global user.email andrey.malyshenko@gmail.com
+git config --global user.name andrey.malyshenko
+
 echo " *** Config personal profile"
 cp ./home/dronische/.bashrc /home/dronische/.bashrc
 chown dronische:dronische /home/dronische/.bashrc
 
 mkdir /home/dronische/.ssh
 touch /home/dronische/.ssh/authorized_keys
-chmod 700 ./.ssh -R
+chmod 700 /home/dronische/.ssh -R
 chown dronische:dronische /home/dronische/.ssh -R
 
 echo " *** Configuring pc name"
